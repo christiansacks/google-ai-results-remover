@@ -1,0 +1,22 @@
+/*
+ * Instant hiding of known AI containers, applied at document_start so the
+ * AI block never flashes before content.js runs.
+ *
+ * Google rotates obfuscated class names; these are the currently known
+ * stable-ish hooks. content.js handles anything this file misses.
+ */
+
+/* AI Overview main container */
+#m-x-content,
+div[data-mcpr],
+.M8OgIe,
+#Odp5De,
+/* SGE / generative answer wrappers */
+div[jsname="txosbe"],
+div[data-rl] div[data-subtree="mfc"],
+/* "People also ask" style AI follow-up chips inside the AI block */
+div[data-attrid="SGE"],
+/* Elements the content script has tagged for removal */
+[data-gair-hidden="1"] {
+  display: none !important;
+}
